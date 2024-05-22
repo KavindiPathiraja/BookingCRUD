@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  <display-name>Booking Management Web Application</display-name>
+  <error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/Error.jsp</location>
+	</error-page>
+	
+	<welcome-file-list>
+        <welcome-file>dash.jsp</welcome-file>
+    </welcome-file-list>
+  
+  
+	<!-- Booking -->
+     <servlet>
+		<servlet-name>bookingsServlet</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/insert</url-pattern>
+	</servlet-mapping>
+  
+  <servlet>
+		<servlet-name>list</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>update</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>edit</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>new</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/new</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>bookingManagement.web.bookingsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>bookingsServlet</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+</web-app>
